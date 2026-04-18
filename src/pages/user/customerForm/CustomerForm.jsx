@@ -77,16 +77,15 @@ export const CustomerForm = () => {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="md">
       <Box mt={6}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h4" sx={{my:3}}>
           Credit Card Application Form
         </Typography>
 
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2}>
-
-            <Grid item xs={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="First Name"
                 name="firstName"
@@ -98,7 +97,7 @@ export const CustomerForm = () => {
               />
             </Grid>
 
-            <Grid item xs={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="Last Name"
                 name="lastName"
@@ -110,7 +109,7 @@ export const CustomerForm = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="Email"
                 name="email"
@@ -122,7 +121,7 @@ export const CustomerForm = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+           <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="Mobile Number"
                 name="mobile"
@@ -133,36 +132,7 @@ export const CustomerForm = () => {
                 helperText={errors.mobile}
               />
             </Grid>
-
-            <Grid item xs={12}>
-              <TextField
-                label="Permanent Address"
-                name="permanentAddress"
-                fullWidth
-                multiline
-                rows={2}
-                value={form.permanentAddress}
-                onChange={handleChange}
-                error={!!errors.permanentAddress}
-                helperText={errors.permanentAddress}
-              />
-            </Grid>
-
-            <Grid item xs={12}>
-              <TextField
-                label="Current Address"
-                name="currentAddress"
-                fullWidth
-                multiline
-                rows={2}
-                value={form.currentAddress}
-                onChange={handleChange}
-                error={!!errors.currentAddress}
-                helperText={errors.currentAddress}
-              />
-            </Grid>
-
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="Birth Date"
                 name="birthDate"
@@ -176,7 +146,7 @@ export const CustomerForm = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 label="PAN Card Number"
                 name="pan"
@@ -194,9 +164,38 @@ export const CustomerForm = () => {
                 helperText={errors.pan}
               />
             </Grid>
+            <Grid size={{ xs: 12, md: 12 }}>
+              <TextField
+                label="Permanent Address"
+                name="permanentAddress"
+                fullWidth
+                multiline
+                rows={2}
+                value={form.permanentAddress}
+                onChange={handleChange}
+                error={!!errors.permanentAddress}
+                helperText={errors.permanentAddress}
+              />
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 12 }}>
+              <TextField
+                label="Current Address"
+                name="currentAddress"
+                fullWidth
+                multiline
+                rows={2}
+                value={form.currentAddress}
+                onChange={handleChange}
+                error={!!errors.currentAddress}
+                helperText={errors.currentAddress}
+              />
+            </Grid>
+
+            
 
             <Grid item xs={12}>
-              <Button type="submit" variant="contained" fullWidth>
+              <Button type="submit" variant="contained">
                 Submit
               </Button>
             </Grid>

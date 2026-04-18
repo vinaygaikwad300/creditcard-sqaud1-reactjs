@@ -4,6 +4,7 @@ import { AllRoutes } from "../src/routes/AllRoutes"
 
 function App() {
   return (
+    
     <BrowserRouter>
       <AllRoutes />
     </BrowserRouter>

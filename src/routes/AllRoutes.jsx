@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import {CustomerForm} from '../pages/user/customerForm/CustomerForm'
 import PublicLayout from "../layout/publicLayout";
-//import AuthLayout from "../layout/AuthLayout";
+import AuthLayout from "../layout/authLayout";
 import AdminLayout from "../layout/adminLayout";
 
 // import Home from "../pages/public/Home";
 // import About from "../pages/public/About";
 
-// import Login from "../pages/auth/Login";
+import Login from "../pages/auth/Login";
 // import Register from "../pages/auth/Register";
 
 import Dashboard from "../pages/admin/dashboard/dashboard";
@@ -23,10 +23,9 @@ export const AllRoutes = () => {
       </Route>
 
       {/* Auth Routes */}
-      {/* <Route element={<AuthLayout />}>
+      <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Route> */}
+      </Route>
 
       {/* Admin Routes */}
       <Route path="/admin" element={<AdminLayout />}>
