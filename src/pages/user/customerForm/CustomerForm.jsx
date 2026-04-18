@@ -1,5 +1,8 @@
+
 export const CustomerForm = () => {
   return (
-    <div>CustomerForm</div>
+    <>
+     <h2>Form kdjalkfjadslkf</h2>
+    </>
   )
 }
