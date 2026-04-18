@@ -75,4 +75,135 @@ export const CustomerForm = () => {
       setErrors({});
     }
   };
+
+  return (
+    <Container maxWidth="sm">
+      <Box mt={6}>
+        <Typography variant="h5" gutterBottom>
+          Credit Card Application Form
+        </Typography>
+
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+
+            <Grid item xs={6}>
+              <TextField
+                label="First Name"
+                name="firstName"
+                fullWidth
+                value={form.firstName}
+                onChange={handleChange}
+                error={!!errors.firstName}
+                helperText={errors.firstName}
+              />
+            </Grid>
+
+            <Grid item xs={6}>
+              <TextField
+                label="Last Name"
+                name="lastName"
+                fullWidth
+                value={form.lastName}
+                onChange={handleChange}
+                error={!!errors.lastName}
+                helperText={errors.lastName}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Email"
+                name="email"
+                fullWidth
+                value={form.email}
+                onChange={handleChange}
+                error={!!errors.email}
+                helperText={errors.email}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Mobile Number"
+                name="mobile"
+                fullWidth
+                value={form.mobile}
+                onChange={handleChange}
+                error={!!errors.mobile}
+                helperText={errors.mobile}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Permanent Address"
+                name="permanentAddress"
+                fullWidth
+                multiline
+                rows={2}
+                value={form.permanentAddress}
+                onChange={handleChange}
+                error={!!errors.permanentAddress}
+                helperText={errors.permanentAddress}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Current Address"
+                name="currentAddress"
+                fullWidth
+                multiline
+                rows={2}
+                value={form.currentAddress}
+                onChange={handleChange}
+                error={!!errors.currentAddress}
+                helperText={errors.currentAddress}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Birth Date"
+                name="birthDate"
+                type="date"
+                fullWidth
+                InputLabelProps={{ shrink: true }}
+                value={form.birthDate}
+                onChange={handleChange}
+                error={!!errors.birthDate}
+                helperText={errors.birthDate}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                label="PAN Card Number"
+                name="pan"
+                fullWidth
+                value={form.pan}
+                onChange={(e) =>
+                  handleChange({
+                    target: {
+                      name: "pan",
+                      value: e.target.value.toUpperCase()
+                    }
+                  })
+                }
+                error={!!errors.pan}
+                helperText={errors.pan}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Button type="submit" variant="contained" fullWidth>
+                Submit
+              </Button>
+            </Grid>
+
+          </Grid>
+        </form>
+      </Box>
+    </Container>
+  );
 }

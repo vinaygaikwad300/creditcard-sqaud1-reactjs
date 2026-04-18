@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import {CustomerForm} from '../pages/customerForm/CustomerForm'
+import {CustomerForm} from '../pages/user/customerForm/CustomerForm'
 import PublicLayout from "../layout/publicLayout";
 //import AuthLayout from "../layout/AuthLayout";
 import AdminLayout from "../layout/adminLayout";
